@@ -23,4 +23,13 @@ export class AppComponent {
     }
     return this.allItems.filter(item => this.filter === 'done' ? item.done : !item.done);
   }
+
+
+  addItem(description: string) {
+    this.allItems.unshift({
+      description,
+      done:false
+    });
+  }
+  
 }
